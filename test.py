@@ -1,5 +1,34 @@
 from tkinter import *
 
+info = Tk()
+info.geometry("425x270")
+info.resizable(False, False)
+info.title("Formula 1 (TM) Wheel - Info")
+info["background"] = "white"
+
+title = Label(info, text = "Formula 1 (TM) Wheel - Info", bg = "white", fg = "black", font = ("Tahoma", 20))
+title.pack()
+one = Label(info, text = "A: Shift Up", bg = "white", fg = "black", font = ("Tahoma", 10))
+one.place(x = 70, y = 50)
+two = Label(info, text = "Z: Shift Down", bg = "white", fg = "black", font = ("Tahoma", 10))
+two.place(x = 70, y = 70)
+three = Label(info, text = "+: Brake Rep. to Front", bg = "white", fg = "black", font = ("Tahoma", 10))
+three.place(x = 70, y = 90)
+four = Label(info, text = "-: Brake Rep. to Rear", bg = "white", fg = "black", font = ("Tahoma", 10))
+four.place(x = 70, y = 110)
+five = Label(info, text = "O: Differential Power Up", bg = "white", fg = "black", font = ("Tahoma", 10))
+five.place(x = 70, y = 130)
+six = Label(info, text = "K: Differential Power Down", bg = "white", fg = "black", font = ("Tahoma", 10))
+six.place(x = 70, y = 150)
+seven = Label(info, text = "1: Charging Mode", bg = "white", fg = "black", font = ("Tahoma", 10))
+seven.place(x = 70, y = 170)
+eight = Label(info, text = "2: Race Mode", bg = "white", fg = "black", font = ("Tahoma", 10))
+eight.place(x = 70, y = 190)
+nine = Label(info, text = "3: Quali Mode", bg = "white", fg = "black", font = ("Tahoma", 10))
+nine.place(x = 70, y = 210)
+ten = Label(info, text = "4: Attack Mode", bg = "white", fg = "black", font = ("Tahoma", 10))
+ten.place(x = 70, y = 230)
+
 def shiftUp(root, frame1, g, b, d, m):
     frame1.destroy()
     root.withdraw()
