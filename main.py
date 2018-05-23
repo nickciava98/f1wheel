@@ -29,6 +29,15 @@ nine.place(x = 70, y = 210)
 ten = Label(info, text = "4: Attack Mode", bg = "white", fg = "black", font = ("Tahoma", 10))
 ten.place(x = 70, y = 230)
 
+def center(toplevel):
+    toplevel.update_idletasks()
+    w = toplevel.winfo_screenwidth()
+    h = toplevel.winfo_screenheight()
+    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
+    x = w/2 - size[0]/2
+    y = h/2 - size[1]/2
+    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
+
 def shiftUp(root, frame1, g, b, d, m):
     frame1.destroy()
     root.withdraw()
@@ -73,6 +82,7 @@ def brakeUp(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "white"
@@ -97,6 +107,7 @@ def brakeDown(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "white"
@@ -121,6 +132,7 @@ def diffUp(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#b22222"
@@ -145,6 +157,7 @@ def diffDown(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#b22222"
@@ -169,6 +182,7 @@ def charging(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#1e90ff"
@@ -194,6 +208,7 @@ def race(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#1e90ff"
@@ -219,6 +234,7 @@ def quali(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#1e90ff"
@@ -243,6 +259,7 @@ def attack(root, frame1, b, g, d, m):
     root2.resizable(False, False)
     root2.title("Formula 1 (TM) Wheel")
     root2["background"] = "black"
+    center(root2)
 
     frame2 = Frame(root2)
     frame2["background"] = "#1e90ff"
@@ -265,6 +282,7 @@ def main(g, b, d, m):
     root.resizable(False, False)
     root.title("Formula 1 (TM) Wheel")
     root["background"] = "black"
+    center(root)
 
     frame1 = Frame(root)
     frame1["background"] = "black"
